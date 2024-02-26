@@ -1,0 +1,37 @@
+Algorithme determine_orthogonalite(n, vecteurs)
+
+Fonction dot_product(v1, v2)
+    // Calcule le produit scalaire de deux vecteurs v1 et v2
+    ps = 0
+    Pour i de 0 à Longueur(v1) - 1 Faire
+        ps += v1[i] * v2[i]
+    Fin Pour
+    Retourner ps
+Fin Fonction
+
+
+    Pour chaque couple de vecteurs dans vecteurs Faire
+        v1 = Premier vecteur du couple
+        v2 = Deuxième vecteur du couple
+        produit_spatial = dot_product(v1, v2)
+        Si produit_spatial == 0 Alors
+            Afficher("Les vecteurs ", v1, " et ", v2, " sont orthogonaux.")
+        Sinon
+            Afficher("Les vecteurs ", v1, " et ", v2, " ne sont pas orthogonaux.")
+        Fin Si
+    Fin Pour
+Fin Algorithme
+
+******deuxième tache*******
+
+Algorithme tri_par_insertion(tableau)
+    Pour i de 1 à Longueur(tableau) - 1 Faire
+        element_a_inserer = tableau[i]
+        j = i - 1
+        Tant que j >= 0 et tableau[j] > element_a_inserer Faire
+            tableau[j + 1] = tableau[j]
+            j = j - 1
+        Fin Tant Que
+        tableau[j + 1] = element_a_inserer
+    Fin Pour
+Fin Algorithme
