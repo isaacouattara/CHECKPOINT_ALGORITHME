@@ -1,0 +1,26 @@
+algorithme palindrome
+
+var mot : string
+var  debut, fin  : integer 
+
+DEBUT
+Fonction est_palindrome(mot)
+    Si Longueur(mot) <= 1 Alors
+        Retourner Vrai  // Un mot vide ou un mot d'un seul caractère est un palindrome
+    Fin Si
+    
+    début = 0
+    fin = Longueur(mot) - 1
+    
+    Tant que début < fin Faire
+        Si mot[début] != mot[fin] Alors
+            Retourner Faux  // Les caractères ne sont pas égaux, donc ce n'est pas un palindrome
+        Fin Si
+        début += 1
+        fin -= 1
+    Fin Tant Que
+    
+    Retourner Vrai  // Si la boucle a parcouru tout le mot sans différences, c'est un palindrome
+Fin Fonction
+
+FIN
