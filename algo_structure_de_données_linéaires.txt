@@ -1,0 +1,49 @@
+algorithme tri_de_phrase
+
+var nombre_mots , nombre_voyelles, i : integer 
+var phrase : array [1..50] of string
+BEGIN
+    WRITE = ("Entrez une phrase se terminant par un point : ")
+    READ(phrase)
+    
+    nombre_mots = 0
+    nombre_voyelles = 0
+    
+    FOR i to 0 at length(phrase) DO 
+        IF phrase[i] == " " THEN
+            nombre_mots += 1
+        ELSE IF phrase[i] == "a" or "e" or "i" or "o" or "u" or "y" THEN
+            nombre_voyelles += 1
+        END IF
+    END FOR
+    
+    WRITE("Nombre de mots dans la phrase :", nombre_mots)
+    WRITE("Nombre de voyelles dans la phrase :", nombre_voyelles)
+END
+
+******Deuxième tache*********
+
+
+
+algorithme tri_ensemble
+
+var ensemble1,ensemble2 : array [] of integer 
+var sum,element,i : integer
+
+BEGIN
+
+    ensemble1 = [3, 1, 7, 9]
+    ensemble2 = [2, 4, 1, 9, 3]
+
+sum = 0
+
+for i TO 0 AT length(ensemble1) DO 
+    if element not in ensemble2:
+        sum += element
+
+for element in ensemble2:
+    if element not in ensemble1:
+        sum += element
+
+WRITE("La somme des éléments distincts des ensembles est :", sum)
+END
